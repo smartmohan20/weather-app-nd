@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 dotenv.config();
 
 import rootRoutes from './routes/rootRoutes';
+import weatherRouters from './routes/weather/weatherRoutes';
 
 // Create the Express app
 const app = express();
@@ -19,5 +20,6 @@ app.use(bodyParser.json());
 
 // Use the routes
 app.use('/', rootRoutes);
+app.use('/weather', weatherRouters);
 
 export default app;

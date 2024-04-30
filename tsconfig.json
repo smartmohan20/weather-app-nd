@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["node"],
+    "types": ["node", "dotenv"],
     "target": "es6",
     "module": "commonjs",
     "strict": true,

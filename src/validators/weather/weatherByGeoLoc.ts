@@ -8,7 +8,7 @@ const validationRules = [
         .withMessage('Latitude is required')
     .notEmpty()
         .withMessage('Latitude cannot be empty')
-    .isString()
+    .isFloat()
         .withMessage('Latitude must be a float'),
 
     // Validate existence, non-emptiness, and string type for long field

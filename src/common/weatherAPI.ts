@@ -3,7 +3,7 @@ import axios from 'axios';
 const xRapidApiHost = process.env.X_RAPID_API_Host;
 const xRapidApiKey = process.env.X_RAPID_API_KEY;
 
-const options = {
+let options = {
     method: 'GET',
     url: 'https://yahoo-weather5.p.rapidapi.com/weather',
     params: {},

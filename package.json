@@ -1,0 +1,29 @@
+{
+  "name": "weather-app-nd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/smartmohan20/weather-app-nd.git",
+  "author": "smartmohan20 <dev.smartmohan@gmail.com~>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.11.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/nodemon": "^1.19.6",
+    "nodemon": "^3.1.0"
+  },
+  "scripts": {
+    "start": "ts-node ./src/server.ts",
+    "build": "tsc"
+  }
+}

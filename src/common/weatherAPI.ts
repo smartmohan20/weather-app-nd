@@ -30,7 +30,24 @@ export const getWeatherData = async (params: object) : Promise<any> => {
             const response = await axios.request(options);
             objRes.statusCode = 200;
             objRes.message = 'Weather data fetched successfully!';
-            objRes.data = response.data;
+           
+            const weatherData = response.data;
+            const temperatureF = weatherData?.current_observation?.condition?.temperature;
+            const temperatureC = Math.round((temperatureF - 32) * (5/9));
+            const locCity = weatherData?.location?.city;
+            const locCountry = weatherData?.location?.country;
+            const humidity =  weatherData?.current_observation?.atmosphere?.humidity;
+            const windSpeed = weatherData?.current_observation?.wind?.speed;
+
+            const resWeatherData = {
+                temperature: temperatureC,
+                city: locCity,
+                country: locCountry,
+                humidity: humidity,
+                windSpeed: windSpeed
+            };
+
+            objRes.data = resWeatherData
         } catch (err) {
             objRes.errors.push(err);
         }
